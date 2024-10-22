@@ -4,4 +4,40 @@
 .header {
     background-color: v.$grisOscuro;
     padding: 1rem 0 3rem 0;
+
+    &.inicio {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        image-set(
+            url(../img/header.avif) 1x,
+            url(../img/header.webp) 1x,
+            url(../img/header.jpg) 1x
+        );
+        background-position: center center;
+        background-size: cover;
+        
+        @include m.tablet {
+            min-height: 70rem;
+        }
+
+        .contenido-header {
+            @include m.tablet {
+                min-height: 70rem;
+            }
+        }
+    }
+}
+
+.contenido-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    h2 {
+        text-align: left;
+        color: v.$blanco;
+        font-weight: v.$bold;
+        line-height: 1.9;
+        text-wrap: balance;
+        max-width: 60rem;
+    }
 }
