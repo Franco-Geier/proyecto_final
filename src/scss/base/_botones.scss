@@ -5,6 +5,21 @@
     @include m.boton(v.$dorado, block);
 }
 
+@include m.tablet {
+    .boton-dorado {
+        @include m.boton(v.$dorado, inline-block);
+    }
+}
+
+
 .boton-verde {
-    @include m.boton(v.$verde, inline-block);
+    @include m.boton(v.$verde, block);
+    flex: 0 0 100%;
+}
+
+@include m.tablet {
+    .boton-verde {
+        @include m.boton(v.$verde, inline-block);
+        flex: 0 0 auto;
+    }
 }

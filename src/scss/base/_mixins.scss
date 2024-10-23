@@ -44,6 +44,7 @@
     text-align: center;
     margin-top: calc(v.$separacion / 2);
     display: $display;
+    border-radius: .5rem;
 
     &:hover {
         background-color: color.adjust($bgColor, $lightness: -5%);
