@@ -1,5 +1,6 @@
 /** Media Queries **/
 @use "variables" as v;
+@use "sass:color";
 
 @mixin telefonoSM {
     @media only screen and (min-width: v.$telefonoSM) {
@@ -31,5 +32,21 @@
     grid-template-columns: repeat($columnas, 1fr);
     @if $espaciado != null {
         gap: $espaciado;
+    }
+}
+
+@mixin boton($bgColor, $display: null) {
+    background-color: $bgColor;
+    color: v.$blanco;
+    font-weight: v.$bold;
+    text-decoration: none;
+    padding: 1rem 3rem;
+    text-align: center;
+    margin-top: calc(v.$separacion / 2);
+    display: $display;
+
+    &:hover {
+        background-color: color.adjust($bgColor, $lightness: -5%);
+        transition: all .3s ease;
     }
 }

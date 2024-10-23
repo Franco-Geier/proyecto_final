@@ -4,7 +4,7 @@
 @include m.tablet {
     .iconos-nosotros {
         display: grid;
-        @include m.grid(3, 2rem)
+        @include m.grid(3, 2.2rem)
     }
 }
 .icono {
@@ -15,12 +15,15 @@
         padding: 1.2rem;
         border-radius: 1.5rem;
         background-color: v.$dorado;
+        box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
     }
-
     h3 {
         text-transform: uppercase;
+        margin-bottom: 0;
     }
     p {
         text-align: center;
+        text-wrap: balance;
+        margin: 1rem 0 4rem;
     }
 }
