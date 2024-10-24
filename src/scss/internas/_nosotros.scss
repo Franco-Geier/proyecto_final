@@ -1,0 +1,62 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.contenido-nosotros {
+    display: grid;
+
+    @include m.tablet {
+        @include m.grid(2, 2rem);
+    }
+}
+
+.texto-nosotros {
+    grid-row: 2 / 3;
+    animation: fadeInUp 1s ease;
+
+    @include m.tablet {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+
+    blockquote {
+        font-weight: v.$black;
+        font-size: 2.2rem;
+        margin: 0;
+        padding-top: 1rem;
+    }
+
+    p {
+        margin-top: .5rem;
+        margin-bottom: 1rem;
+    }
+}
+
+.imagen-nosotros {
+    animation: fadeInRight 1s ease;
+
+    img {
+        border-radius: 1rem;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(5rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-5rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
